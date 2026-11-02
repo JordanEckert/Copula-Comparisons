@@ -1,0 +1,10 @@
+data/
+data
+data.tar
+__pycache__/
+*.pyc
+.DS_Store
+catboost_info/
+exp/**
+!exp/**/
+!exp/**/config.toml

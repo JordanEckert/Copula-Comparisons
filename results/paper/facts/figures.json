@@ -1,0 +1,256 @@
+{
+ "D1": {
+  "n_points_total": 69,
+  "n_points_per_method": {
+   "TVAE": 15,
+   "CTAB-GAN": 9,
+   "CTAB-GAN+": 15,
+   "TabDDPM": 15,
+   "BetaCopula": 15
+  },
+  "n_clipped": 1,
+  "clipped_points": [
+   {
+    "dataset": "miniboone",
+    "method": "TVAE",
+    "cost_per_draw_s": 65548.6004217617,
+    "p2_gap_to_real": -0.7152638311825733
+   }
+  ],
+  "ylim": [
+   -0.6,
+   0.05
+  ],
+  "medians": {
+   "TVAE": {
+    "n": 15,
+    "median_cost_per_draw_s": 6544.365590167236,
+    "median_p2_gap": -0.1822412601232502
+   },
+   "CTAB-GAN": {
+    "n": 9,
+    "median_cost_per_draw_s": 147577.95481879424,
+    "median_p2_gap": -0.0614695843802575
+   },
+   "CTAB-GAN+": {
+    "n": 15,
+    "median_cost_per_draw_s": 149041.87992801133,
+    "median_p2_gap": -0.0950118531042486
+   },
+   "TabDDPM": {
+    "n": 15,
+    "median_cost_per_draw_s": 3615.468810789871,
+    "median_p2_gap": -0.0237936880266484
+   },
+   "BetaCopula": {
+    "n": 15,
+    "median_cost_per_draw_s": 0.6523838104248045,
+    "median_p2_gap": -0.0110604837295883
+   }
+  }
+ },
+ "D2": {
+  "p2": {
+   "n": 15,
+   "k": 7,
+   "cd": 2.3256661933086953,
+   "p": 1.0308910250945117e-13,
+   "chi2": 72.91428571428571,
+   "order_best_first": [
+    "Checkerboard",
+    "TabDDPM",
+    "BetaCopula",
+    "CTAB-GAN+",
+    "TVAE",
+    "VineCopula",
+    "GaussCopula"
+   ],
+   "mean_ranks": {
+    "Checkerboard": 1.4666666666666666,
+    "TabDDPM": 2.2,
+    "BetaCopula": 2.3333333333333335,
+    "CTAB-GAN+": 4.8,
+    "TVAE": 5.133333333333334,
+    "VineCopula": 5.866666666666666,
+    "GaussCopula": 6.2
+   },
+   "cliques": [
+    [
+     "Checkerboard",
+     "TabDDPM",
+     "BetaCopula"
+    ],
+    [
+     "CTAB-GAN+",
+     "TVAE",
+     "VineCopula",
+     "GaussCopula"
+    ]
+   ]
+  },
+  "corr_l2": {
+   "n": 15,
+   "k": 7,
+   "cd": 2.3256661933086953,
+   "p": 3.6493233170718895e-10,
+   "chi2": 55.51428571428568,
+   "order_best_first": [
+    "Checkerboard",
+    "BetaCopula",
+    "TabDDPM",
+    "GaussCopula",
+    "VineCopula",
+    "CTAB-GAN+",
+    "TVAE"
+   ],
+   "mean_ranks": {
+    "Checkerboard": 1.5333333333333334,
+    "BetaCopula": 1.6,
+    "TabDDPM": 4.4,
+    "GaussCopula": 4.733333333333333,
+    "VineCopula": 5.066666666666666,
+    "CTAB-GAN+": 5.2,
+    "TVAE": 5.466666666666667
+   },
+   "cliques": [
+    [
+     "Checkerboard",
+     "BetaCopula"
+    ],
+    [
+     "TabDDPM",
+     "GaussCopula",
+     "VineCopula",
+     "CTAB-GAN+",
+     "TVAE"
+    ]
+   ]
+  },
+  "ci_overlap": {
+   "n": 15,
+   "k": 7,
+   "cd": 2.3256661933086953,
+   "p": 1.0863982142318462e-10,
+   "chi2": 58.1142857142857,
+   "order_best_first": [
+    "Checkerboard",
+    "BetaCopula",
+    "TabDDPM",
+    "TVAE",
+    "GaussCopula",
+    "CTAB-GAN+",
+    "VineCopula"
+   ],
+   "mean_ranks": {
+    "Checkerboard": 1.2,
+    "BetaCopula": 2.066666666666667,
+    "TabDDPM": 3.8666666666666667,
+    "TVAE": 4.6,
+    "GaussCopula": 5.266666666666667,
+    "CTAB-GAN+": 5.4,
+    "VineCopula": 5.6
+   },
+   "cliques": [
+    [
+     "Checkerboard",
+     "BetaCopula"
+    ],
+    [
+     "BetaCopula",
+     "TabDDPM"
+    ],
+    [
+     "TabDDPM",
+     "TVAE",
+     "GaussCopula",
+     "CTAB-GAN+",
+     "VineCopula"
+    ]
+   ]
+  },
+  "assoc_l2": {
+   "n": 15,
+   "k": 7,
+   "cd": 2.3256661933086953,
+   "p": 6.719820167036905e-11,
+   "chi2": 59.14285714285711,
+   "order_best_first": [
+    "Checkerboard",
+    "BetaCopula",
+    "TabDDPM",
+    "CTAB-GAN+",
+    "GaussCopula",
+    "TVAE",
+    "VineCopula"
+   ],
+   "mean_ranks": {
+    "Checkerboard": 1.3333333333333333,
+    "BetaCopula": 1.6666666666666667,
+    "TabDDPM": 4.333333333333333,
+    "CTAB-GAN+": 4.8,
+    "GaussCopula": 5.066666666666666,
+    "TVAE": 5.266666666666667,
+    "VineCopula": 5.533333333333333
+   },
+   "cliques": [
+    [
+     "Checkerboard",
+     "BetaCopula"
+    ],
+    [
+     "TabDDPM",
+     "CTAB-GAN+",
+     "GaussCopula",
+     "TVAE",
+     "VineCopula"
+    ]
+   ]
+  }
+ },
+ "D4": {
+  "methods_drawn": [
+   "CTAB-GAN+",
+   "CTAB-GAN",
+   "TVAE",
+   "TabDDPM",
+   "VineCopula",
+   "GaussCopula",
+   "Checkerboard",
+   "BetaCopula"
+  ],
+  "log_log_slopes": {
+   "CTAB-GAN+": {
+    "n_points": 15,
+    "slope_log_log": 0.739036570880867
+   },
+   "CTAB-GAN": {
+    "n_points": 9,
+    "slope_log_log": 0.30253635563163384
+   },
+   "TVAE": {
+    "n_points": 15,
+    "slope_log_log": 1.2097746451598226
+   },
+   "TabDDPM": {
+    "n_points": 15,
+    "slope_log_log": 0.6989132647034871
+   },
+   "VineCopula": {
+    "n_points": 15,
+    "slope_log_log": 2.048407952017042
+   },
+   "GaussCopula": {
+    "n_points": 15,
+    "slope_log_log": 1.172904601301815
+   },
+   "Checkerboard": {
+    "n_points": 15,
+    "slope_log_log": 1.341441421252687
+   },
+   "BetaCopula": {
+    "n_points": 15,
+    "slope_log_log": 1.2585923826410133
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+% A5 (appendix): per-dataset analyst-GLM 95% CI overlap, mean$\pm$std (population SD over generation seeds); task type in parentheses; bold = best per dataset; Mean over the 15 complete datasets (CTAB-GAN: its 9); mean rank from the complete-case ranking. For a table at \footnotesize in the one-column appendix.
+\begingroup\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Dataset & TabDDPM & CTAB-GAN$^{\dagger}$ & CTAB-GAN+ & TVAE & VineCopula & GaussCopula & Checkerboard & BetaCopula \\
+\midrule
+abalone (reg) & 0.491$\pm$0.048 & --- & 0.403$\pm$0.050 & 0.328$\pm$0.023 & 0.610$\pm$0.057 & 0.284$\pm$0.015 & \textbf{0.758$\pm$0.103} & 0.677$\pm$0.074 \\
+adult (bin) & 0.654$\pm$0.042 & 0.528$\pm$0.014 & 0.476$\pm$0.017 & 0.569$\pm$0.012 & 0.403$\pm$0.038 & 0.433$\pm$0.032 & \textbf{0.785$\pm$0.025} & 0.779$\pm$0.021 \\
+buddy (multi) & 0.720$\pm$0.052 & 0.582$\pm$0.013 & 0.686$\pm$0.047 & 0.562$\pm$0.107 & 0.540$\pm$0.060 & 0.555$\pm$0.005 & \textbf{0.821$\pm$0.010} & 0.793$\pm$0.032 \\
+california (reg) & 0.537$\pm$0.068 & --- & 0.097$\pm$0.024 & 0.000 & 0.155$\pm$0.076 & 0.122$\pm$0.052 & \textbf{0.721$\pm$0.146} & 0.529$\pm$0.174 \\
+cardio (bin) & 0.546$\pm$0.074 & 0.220$\pm$0.037 & 0.462$\pm$0.020 & 0.500 & 0.352$\pm$0.041 & 0.283$\pm$0.047 & \textbf{0.671$\pm$0.075} & 0.659$\pm$0.080 \\
+churn2 (bin) & 0.533$\pm$0.038 & 0.369$\pm$0.042 & 0.491$\pm$0.033 & 0.505$\pm$0.036 & 0.502$\pm$0.040 & 0.470$\pm$0.025 & \textbf{0.712$\pm$0.048} & 0.710$\pm$0.049 \\
+diabetes (bin) & 0.694$\pm$0.039 & 0.646$\pm$0.092 & 0.645$\pm$0.072 & 0.598$\pm$0.050 & 0.594$\pm$0.068 & 0.663$\pm$0.066 & 0.846$\pm$0.039 & \textbf{0.848$\pm$0.043} \\
+fb-comments (reg) & 0.224$\pm$0.027 & --- & 0.386$\pm$0.011 & 0.500$\pm$0.009 & 0.438$\pm$0.022 & 0.525$\pm$0.006 & \textbf{0.745$\pm$0.021} & 0.679$\pm$0.011 \\
+gesture (multi) & 0.556$\pm$0.052 & 0.478$\pm$0.027 & 0.553$\pm$0.044 & 0.643$\pm$0.024 & 0.626$\pm$0.015 & 0.695$\pm$0.027 & \textbf{0.779$\pm$0.068} & 0.773$\pm$0.047 \\
+higgs-small (bin) & 0.557$\pm$0.034 & 0.101$\pm$0.014 & 0.300$\pm$0.010 & 0.327$\pm$0.019 & 0.316$\pm$0.021 & 0.348$\pm$0.007 & \textbf{0.806$\pm$0.018} & 0.804$\pm$0.018 \\
+house (reg) & 0.476$\pm$0.117 & --- & 0.140$\pm$0.027 & 0.203$\pm$0.032 & 0.319$\pm$0.036 & 0.249$\pm$0.030 & \textbf{0.715$\pm$0.041} & 0.703$\pm$0.065 \\
+insurance (reg) & 0.737$\pm$0.067 & --- & 0.624$\pm$0.067 & 0.469$\pm$0.098 & 0.423$\pm$0.035 & 0.361$\pm$0.059 & 0.763$\pm$0.079 & \textbf{0.770$\pm$0.086} \\
+king (reg) & 0.112$\pm$0.022 & --- & 0.335$\pm$0.049 & 0.339$\pm$0.043 & 0.310$\pm$0.032 & 0.377$\pm$0.019 & \textbf{0.635$\pm$0.050} & 0.625$\pm$0.055 \\
+miniboone (bin) & 0.086$\pm$0.006 & 0.068$\pm$0.007 & 0.115$\pm$0.012 & \textbf{0.501} & 0.077$\pm$0.006 & 0.062$\pm$0.001 & 0.268$\pm$0.052 & 0.094$\pm$0.021 \\
+wilt (bin) & 0.425$\pm$0.204 & 0.290$\pm$0.051 & 0.253$\pm$0.041 & 0.315$\pm$0.004 & 0.247$\pm$0.052 & 0.306$\pm$0.009 & \textbf{0.750$\pm$0.169} & 0.469$\pm$0.134 \\
+\midrule
+Mean & 0.490 & 0.365 & 0.398 & 0.424 & 0.394 & 0.382 & 0.718 & 0.661 \\
+Mean rank & 3.87 & --- & 5.40 & 4.60 & 5.60 & 5.27 & 1.20 & 2.07 \\
+\bottomrule
+\end{tabular}
+\endgroup

@@ -1,0 +1,28 @@
+# Utility gap to Real: (method value - real value) per dataset, over datasets where both are finite
+metric,method,n_datasets,mean_gap,median_gap,min_gap,max_gap,n_within_0.02,n_above_real,datasets
+p2,TabDDPM,15,-0.033497793874537926,-0.023793688026648496,-0.13639137308937466,0.008190968247823616,7,2,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p2,CTAB-GAN,9,-0.08814275776841325,-0.061469584380257514,-0.2713824786640554,-0.018051286949922085,1,0,adult;buddy;cardio;churn2;diabetes;gesture;higgs-small;miniboone;wilt
+p2,CTAB-GAN+,15,-0.13570984850074005,-0.09501185310424864,-0.434599384364281,-0.009530574281164106,1,0,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p2,TVAE,15,-0.2029717668650185,-0.18224126012325026,-0.7152638311825733,-0.03742916032550281,0,0,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p2,VineCopula,15,-0.18104870655666144,-0.13615110314419043,-0.35332723606530014,-0.012202152809899225,1,0,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p2,GaussCopula,15,-0.18890385596357687,-0.16645028339028012,-0.33676228867989527,-0.01775857216996002,1,0,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p2,Checkerboard,15,-0.01608356984504765,-0.00824968654925251,-0.08320891649354833,0.0025973945662299824,11,1,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p2,BetaCopula,15,-0.0192436275765618,-0.011060483729588344,-0.0996444725871608,-0.002433470292813489,11,0,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,TabDDPM,15,934358.7391760256,-0.0058375804948638255,-0.03841721789874214,14015380.610673584,10,6,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,CTAB-GAN,9,-0.05478834641367657,-0.02578153000199168,-0.17898271813086186,0.001418304001302717,3,1,adult;buddy;cardio;churn2;diabetes;gesture;higgs-small;miniboone;wilt
+p1,CTAB-GAN+,15,934186.132952916,-0.060522524818039214,-12.927171621019394,14012804.600903468,4,3,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,TVAE,15,933811.8951701774,-0.1007197272274668,-14.338361126967444,14007193.604229117,2,3,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,VineCopula,15,396387.2627328184,-0.08992768420458674,-0.3172321007462659,5945809.478035516,1,3,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,GaussCopula,15,712743.9826575532,-0.10624660492245963,-0.4502826868276509,10691160.188149728,0,2,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,Checkerboard,15,528055.1403236089,-0.0002473283905635171,-0.0322368335987156,7920825.369332587,9,7,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+p1,BetaCopula,15,661009.758386537,-0.006326985026164911,-0.2603944783907382,9915144.912375271,9,3,abalone;adult;buddy;california;cardio;churn2;diabetes;fb-comments;gesture;higgs-small;house;insurance;king;miniboone;wilt
+
+# Head-to-head on P2, BetaCopula minus other; ties = |diff| <= 0.001
+metric,comparison,n_datasets,beta_wins,beta_losses,ties,tie_threshold,mean_diff_beta_minus_other,median_diff_beta_minus_other,loss_datasets,tie_datasets
+p2,BetaCopula vs TabDDPM,15,7,4,4,0.001,0.014254166297976127,0.000639433823024671,churn2;diabetes;house;insurance,buddy;cardio;miniboone;wilt
+p2,BetaCopula vs CTAB-GAN,9,8,1,0,0.001,0.06832834100972057,0.05406509218774569,diabetes,
+p2,BetaCopula vs CTAB-GAN+,15,15,0,0,0.001,0.11646622092417823,0.0677123819836149,,
+p2,BetaCopula vs TVAE,15,15,0,0,0.001,0.18372813928845672,0.17290187658703216,,
+p2,BetaCopula vs VineCopula,15,15,0,0,0.001,0.16180507898009966,0.12975052392282505,,
+p2,BetaCopula vs GaussCopula,15,15,0,0,0.001,0.16966022838701503,0.16401681309746663,,
+p2,BetaCopula vs Checkerboard,15,1,7,7,0.001,-0.0031600577315141543,-0.0008886086313599773,adult;california;churn2;diabetes;house;insurance;wilt,buddy;cardio;fb-comments;gesture;higgs-small;king;miniboone

@@ -1,0 +1,27 @@
+% A5: mean ranks (1 = best) over complete-case datasets, 7 methods, metrics as rows; n = datasets used, CD = Nemenyi critical difference (alpha = 0.05), p = Friedman p-value. Header abbreviations as in table_p2_corr.tex.
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Metric & $n$ & CD & $p$ & Beta & Chkb & Gauss & Vine & DDPM & CTAB+ & TVAE \\
+\midrule
+\multicolumn{11}{l}{\emph{Utility}} \\
+P1 $\uparrow$ & 15 & 2.33 & $5.3\times10^{-9}$ & \textbf{2.33} & \textbf{2.33} & 5.67 & 5.73 & \textbf{2.33} & 4.60 & 5.00 \\
+P2 $\uparrow$ & 15 & 2.33 & $1.0\times10^{-13}$ & 2.33 & \textbf{1.47} & 6.20 & 5.87 & 2.20 & 4.80 & 5.13 \\
+\multicolumn{11}{l}{\emph{Statistical fidelity}} \\
+CorrL2 $\downarrow$ & 15 & 2.33 & $3.6\times10^{-10}$ & 1.60 & \textbf{1.53} & 4.73 & 5.07 & 4.40 & 5.20 & 5.47 \\
+AssocL2 $\downarrow$ & 15 & 2.33 & $6.7\times10^{-11}$ & 1.67 & \textbf{1.33} & 5.07 & 5.53 & 4.33 & 4.80 & 5.27 \\
+WD $\downarrow$ & 15 & 2.33 & $5.8\times10^{-13}$ & 2.33 & \textbf{2.27} & 2.87 & 2.53 & 5.53 & 6.20 & 6.27 \\
+JS $\downarrow$ & 8 & 3.18 & $2.8\times10^{-4}$ & \textbf{1.88} & 2.75 & 4.63 & 2.63 & 5.00 & 5.00 & 6.13 \\
+pMSE ratio $\to 1$ & 15 & 2.33 & $3.4\times10^{-11}$ & 1.93 & 3.13 & 4.27 & 4.80 & \textbf{1.87} & 5.47 & 6.53 \\
+\multicolumn{11}{l}{\emph{Faithfulness}} \\
+$\alpha$-precision $\uparrow$ & 15 & 2.33 & 0.274 & \textbf{3.20} & 3.40 & 4.93 & 4.60 & 3.93 & 3.73 & 4.20 \\
+$\beta$-recall $\uparrow$ & 15 & 2.33 & $1.5\times10^{-9}$ & 2.33 & \textbf{1.67} & 6.13 & 4.87 & 3.07 & 5.13 & 4.80 \\
+Authenticity $\uparrow$ & 15 & 2.33 & $2.8\times10^{-14}$ & 6.20 & 6.80 & \textbf{1.67} & 2.13 & 4.80 & 3.20 & 3.20 \\
+\multicolumn{11}{l}{\emph{Privacy proxies}} \\
+DCR ratio $\uparrow$ & 15 & 2.33 & $6.7\times10^{-12}$ & 6.00 & 7.00 & \textbf{2.00} & 2.73 & 3.80 & 3.00 & 3.47 \\
+DCR$_{5\%}$ ratio $\uparrow$ & 15 & 2.33 & $4.6\times10^{-13}$ & 6.00 & 7.00 & \textbf{2.07} & 2.67 & 4.60 & 3.07 & 2.60 \\
+\multicolumn{11}{l}{\emph{Inference fidelity}} \\
+CI overlap $\uparrow$ & 15 & 2.33 & $1.1\times10^{-10}$ & 2.07 & \textbf{1.20} & 5.27 & 5.60 & 3.87 & 5.40 & 4.60 \\
+Coverage $\uparrow$ & 15 & 2.33 & $2.3\times10^{-9}$ & 2.20 & \textbf{1.37} & 5.27 & 5.63 & 3.90 & 5.07 & 4.57 \\
+Sig.\ agree $\uparrow$ & 15 & 2.33 & $5.9\times10^{-10}$ & 2.13 & \textbf{1.50} & 3.97 & 5.87 & 3.87 & 5.33 & 5.33 \\
+\bottomrule
+\end{tabular}

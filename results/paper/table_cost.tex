@@ -1,0 +1,15 @@
+% C4: wall-clock cost. $n$ = number of datasets with a training measurement; medians over those datasets. Total train = sum over the $n$ datasets ($^{\dagger}$CTAB-GAN: 9 classification datasets only). Sample ($5\times$) = time to draw 5 synthetic datasets of n_train rows (profiled for every method).
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & $n$ & Median train & Total train & Median sample ($5\times$) & Median size (MiB) & Median \#params \\
+\midrule
+TabDDPM & 15 & 50.0 min & 11.13 h & 4.9 min & 4.9 & 1.28 M \\
+CTAB-GAN$^{\dagger}$ & 9 & 1.71 d & 16.29 d & 16.48 s & 7.0 & 1.05 M \\
+CTAB-GAN+ & 15 & 1.72 d & 25.24 d & 16.01 s & 5.6 & 872.9 K \\
+TVAE & 15 & 1.82 h & 5.41 d & 8.90 s & 14.4 & 335.9 K \\
+VineCopula & 15 & 10.00 s & 10.65 h & 3.68 s & 1.2 & 156.7 K \\
+GaussCopula & 15 & 0.03 s & 3.35 s & 1.88 s & 1.9 & 248.2 K \\
+Checkerboard & 15 & 0.02 s & 4.59 s & 0.47 s & 3.8 & 495.8 K \\
+BetaCopula & 15 & 0.03 s & 4.09 s & 3.13 s & 3.8 & 495.8 K \\
+\bottomrule
+\end{tabular}

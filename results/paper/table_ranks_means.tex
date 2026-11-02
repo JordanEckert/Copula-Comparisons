@@ -1,0 +1,38 @@
+% A5: merged results table for a table* at \scriptsize. Top block: means over datasets; bottom block: mean ranks (1 = best) over the complete-case datasets for the 7 ranked methods, with n and the Nemenyi CD (alpha = 0.05); Friedman p-values are in facts/suite.json (friedman_p_compact) for the caption. Means block: means over the 15 complete datasets of the per-dataset means (geometric means for pMSE ratio and the two DCR ratios; JS x 1000; P1 omitted because its mean over datasets is dominated by negative R^2 values on regression tasks); CTAB-GAN (dagger) over its 9 classification datasets (JS: 4); bold = best among the 7 ranked methods; Real = train-on-real P2 over the same 15 datasets.
+\begingroup\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{Utility} & \multicolumn{5}{c}{Statistical fidelity} & \multicolumn{3}{c}{Faithfulness} & \multicolumn{2}{c}{Privacy proxies} & \multicolumn{3}{c}{Inference fidelity} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-8} \cmidrule(lr){9-11} \cmidrule(lr){12-13} \cmidrule(lr){14-16}
+Method & P1$\uparrow$ & P2$\uparrow$ & CorrL2$\downarrow$ & AssocL2$\downarrow$ & WD$\downarrow$ & JS$\downarrow$ & pMSE$\to$1 & $\alpha$-prec.$\uparrow$ & $\beta$-rec.$\uparrow$ & Auth.$\uparrow$ & DCR$\uparrow$ & DCR$_{5\%}\uparrow$ & CI$\uparrow$ & Cov.$\uparrow$ & Sig.$\uparrow$ \\
+\midrule
+\multicolumn{16}{l}{\emph{Mean over datasets}} \\
+TabDDPM & --- & 0.754 & 2.087 & 2.231 & 0.735 & 1.66 & 1.325 & 0.843 & 0.899 & 0.533 & 1.439 & 1.045 & 0.490 & 0.568 & 0.787 \\
+CTAB-GAN$^{\dagger}$ & --- & 0.713 & 4.758 & 4.875 & 0.103 & 5.19 & 2.793 & 0.784 & 0.891 & 0.678 & 1.197 & 1.399 & 0.365 & 0.380 & 0.663 \\
+CTAB-GAN+ & --- & 0.651 & 3.196 & 3.316 & 0.247 & 3.22 & 3.586 & 0.660 & 0.803 & 0.719 & 1.569 & 1.968 & 0.398 & 0.429 & 0.729 \\
+TVAE & --- & 0.584 & 4.059 & 4.250 & 0.578 & 47.1 & 4.559 & 0.622 & 0.737 & 0.719 & \textbf{1.743} & \textbf{2.541} & 0.424 & 0.529 & 0.647 \\
+\addlinespace[2pt]
+VineCopula & --- & 0.606 & 3.725 & 4.110 & 0.017 & 0.09 & 2.215 & 0.663 & 0.850 & 0.753 & 1.370 & 1.471 & 0.394 & 0.395 & 0.691 \\
+GaussCopula & --- & 0.598 & 3.637 & 3.935 & 0.017 & 2.02 & 2.129 & 0.640 & 0.806 & \textbf{0.761} & 1.407 & 1.573 & 0.382 & 0.377 & 0.776 \\
+\addlinespace[2pt]
+Checkerboard & --- & \textbf{0.771} & \textbf{0.182} & \textbf{0.206} & \textbf{0.016} & 0.08 & 0.786 & 0.886 & \textbf{0.942} & 0.280 & 0.280 & 0.000 & \textbf{0.718} & \textbf{0.824} & \textbf{0.899} \\
+BetaCopula & --- & 0.768 & 0.420 & 0.444 & 0.016 & \textbf{0.07} & \textbf{0.833} & \textbf{0.888} & 0.936 & 0.289 & 0.554 & 0.093 & 0.661 & 0.757 & 0.874 \\
+\addlinespace[2pt]
+Real & --- & 0.787 & --- & --- & --- & --- & --- & --- & --- & --- & --- & --- & --- & --- & --- \\
+\midrule
+\multicolumn{16}{l}{\emph{Mean rank over datasets (1 is best)}} \\
+TabDDPM & \textbf{2.33} & 2.20 & 4.40 & 4.33 & 5.53 & 5.00 & \textbf{1.87} & 3.93 & 3.07 & 4.80 & 3.80 & 4.60 & 3.87 & 3.90 & 3.87 \\
+CTAB-GAN+ & 4.60 & 4.80 & 5.20 & 4.80 & 6.20 & 5.00 & 5.47 & 3.73 & 5.13 & 3.20 & 3.00 & 3.07 & 5.40 & 5.07 & 5.33 \\
+TVAE & 5.00 & 5.13 & 5.47 & 5.27 & 6.27 & 6.13 & 6.53 & 4.20 & 4.80 & 3.20 & 3.47 & 2.60 & 4.60 & 4.57 & 5.33 \\
+\addlinespace[2pt]
+VineCopula & 5.73 & 5.87 & 5.07 & 5.53 & 2.53 & 2.63 & 4.80 & 4.60 & 4.87 & 2.13 & 2.73 & 2.67 & 5.60 & 5.63 & 5.87 \\
+GaussCopula & 5.67 & 6.20 & 4.73 & 5.07 & 2.87 & 4.63 & 4.27 & 4.93 & 6.13 & \textbf{1.67} & \textbf{2.00} & \textbf{2.07} & 5.27 & 5.27 & 3.97 \\
+\addlinespace[2pt]
+Checkerboard & \textbf{2.33} & \textbf{1.47} & \textbf{1.53} & \textbf{1.33} & \textbf{2.27} & 2.75 & 3.13 & 3.40 & \textbf{1.67} & 6.80 & 7.00 & 7.00 & \textbf{1.20} & \textbf{1.37} & \textbf{1.50} \\
+BetaCopula & \textbf{2.33} & 2.33 & 1.60 & 1.67 & 2.33 & \textbf{1.88} & 1.93 & \textbf{3.20} & 2.33 & 6.20 & 6.00 & 6.00 & 2.07 & 2.20 & 2.13 \\
+\addlinespace[2pt]
+$n$ datasets & 15 & 15 & 15 & 15 & 15 & 8 & 15 & 15 & 15 & 15 & 15 & 15 & 15 & 15 & 15 \\
+Nemenyi CD & 2.33 & 2.33 & 2.33 & 2.33 & 2.33 & 3.18 & 2.33 & 2.33 & 2.33 & 2.33 & 2.33 & 2.33 & 2.33 & 2.33 & 2.33 \\
+\bottomrule
+\end{tabular}
+\endgroup
